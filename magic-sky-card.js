@@ -237,7 +237,7 @@ class MagicSkyCard extends HTMLElement {
   static getStubConfig() { return { entity: 'weather.home' } }
 }
 
-customElements.define('magic-sky-card', MagicSkyCard)
+if (!customElements.get('magic-sky-card')) customElements.define('magic-sky-card', MagicSkyCard)
 window.customCards = window.customCards || []
 window.customCards.push({ type: 'magic-sky-card', name: 'Magic Sky', description: 'Weather-reactive ambient background from Magic Dash' })
 console.info('%c MAGIC-SKY-CARD %c loaded ', 'background:#2f7fc4;color:#fff;border-radius:3px 0 0 3px;padding:2px 4px', 'background:#0a1130;color:#fff;border-radius:0 3px 3px 0;padding:2px 4px')
