@@ -9,16 +9,11 @@
  *   seconds: true       # optional (default true)
  */
 
+import { VARS } from './common.js'
+
 const CSS = `
-:host { display: block; }
-.glass {
-  background: rgba(15,18,32,0.52);
-  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 20px;
-  box-shadow: 0 10px 34px rgba(0,0,0,0.38);
-  container-type: size;
-}
+${VARS}
+.glass { container-type: size; }
 .clock {
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   min-height: 190px; height: 100%; padding: 22px 20px; gap: 2px;
