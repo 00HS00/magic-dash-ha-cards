@@ -13,29 +13,28 @@ import { VARS } from './common.js'
 
 const CSS = `
 ${VARS}
-.glass { container-type: size; }
 .clock {
   display: flex; flex-direction: column; align-items: center; justify-content: center;
-  min-height: 190px; height: 100%; padding: 22px 20px; gap: 2px;
-  color: #eaf0ff;
+  min-height: 190px; padding: 24px 20px; gap: 2px;
+  color: var(--text-hi);
 }
 .clock-time {
-  font-size: clamp(44px, 34cqmin, 120px);
+  font-size: clamp(48px, 7vw, 108px);
   font-weight: 200; letter-spacing: 0.02em; line-height: 1;
   font-variant-numeric: tabular-nums; display: flex; align-items: baseline;
   background: linear-gradient(180deg, #ffffff 0%, #cdd8ff 55%, #8aa7ff 100%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
   filter: drop-shadow(0 0 26px rgba(138,167,255,0.35));
 }
-.clock-seconds { font-size: 0.45em; -webkit-text-fill-color: rgba(220,227,245,0.45); margin-left: 0.12em; }
-.clock-ampm { font-size: 0.32em; font-weight: 500; -webkit-text-fill-color: rgba(220,227,245,0.72); margin-left: 0.28em; letter-spacing: 0.08em; }
+.clock-seconds { font-size: 0.45em; -webkit-text-fill-color: rgba(233,238,251,0.52); margin-left: 0.12em; }
+.clock-ampm { font-size: 0.32em; font-weight: 500; -webkit-text-fill-color: rgba(233,238,251,0.74); margin-left: 0.28em; letter-spacing: 0.08em; }
 .clock-date {
-  margin-top: 0.6em; font-size: clamp(11px, 8cqmin, 18px); color: rgba(220,227,245,0.72);
+  margin-top: 0.6em; font-size: clamp(11px, 1.3vw, 17px); color: var(--text-mid);
   font-weight: 500; text-transform: uppercase; letter-spacing: 0.22em;
   display: flex; align-items: center; gap: 0.7em;
 }
 .clock-date:before, .clock-date:after {
-  content: ''; width: clamp(14px, 6cqmin, 34px); height: 1px;
+  content: ''; width: clamp(14px, 2vw, 34px); height: 1px;
   background: linear-gradient(90deg, transparent, rgba(138,167,255,0.7));
 }
 .clock-date:after { background: linear-gradient(90deg, rgba(138,167,255,0.7), transparent); }
